@@ -96,64 +96,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 
-    {{-- <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const titles = @json($prizes->pluck('title'));
-            const probabilities = @json($prizes->pluck('probability'));
 
-            const prizeData = {
-                labels: titles.map((title, index) => `${title} (${(probabilities[index])}%)`),
-                datasets: [{
-                    data: @json($prizes->pluck('probability')),
-
-                }]
-
-            };
-            new Chart(document.getElementById('probabilityChart'), {
-                type: 'doughnut',
-                data: prizeData,
-                plugins: [ChartDataLabels],
-                options: {
-                    plugins: {
-                        datalabels: {
-                            formatter: (value, context) => {
-                                return context.chart.data.labels[context.dataIndex];
-                            },
-                        }
-                    },
-                }
-            });
-
-
-        });
-        const titles = @json($prizes->pluck('title'));
-        const probabilities = @json($prizes->pluck('probability'));
-
-        const prizData = {
-            labels: titles.map((title, index) => `${title} (${(probabilities[index])}%)`),
-            datasets: [{
-                data: @json($prizes->pluck('probability')),
-                backgroundColor: [
-                    '#32a852', '#36A2EB', '#FFCE56', '#6b5f82', '#cad65c',
-                    '#4BC0C0', '#9966FF', '#FF9F40', '#42263d', '#0e5953'
-                ],
-            }]
-        };
-        new Chart(document.getElementById('awardedChart'), {
-            type: 'doughnut',
-            data: prizData,
-            plugins: [ChartDataLabels],
-            options: {
-                plugins: {
-                    datalabels: {
-                        formatter: (value, context) => {
-                            return context.chart.data.labels[context.dataIndex];
-                        },
-                    }
-                },
-            }
-        });
-    </script> --}}
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const titles = @json($prizes->pluck('title'));
